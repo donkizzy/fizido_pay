@@ -15,7 +15,6 @@ import androidx.annotation.NonNull;
 import com.app.fizido_pay.fizido_pay.FizidoPayPlugin;
 import com.app.fizido_pay.fizido_pay.Sunyard.bean.TlvBean;
 import com.app.fizido_pay.fizido_pay.Sunyard.util.TlvUtils;
-import com.pos.empressa.empressa_pos.KSNUtilities;
 import com.socsi.aidl.pinservice.OperationPinListener;
 import com.socsi.exception.SDKException;
 import com.socsi.smartposapi.card.CardReader;
@@ -300,7 +299,7 @@ public class SunyardReadCard {
 
                     KSNUtilities ksnUtilitites = new KSNUtilities();
                     String workingKey = ksnUtilitites.getWorkingKey("3F2216D8297BCE9C",getInitialKSN()) ;
-                    String pinBlock =  ksnUtilitites.DesEncryptDukpt(workingKey , getpanData(),cardPin);
+                    String pinBlock =  ksnUtilitites.desEncryptDukpt(workingKey , getpanData(),cardPin);
                     cardDataMap.put("CardPin",pinBlock);
                     cardDataMap.put("ksn",ksnUtilitites.getLatestKsn());
                     cardDataMap.put("pan",panNumber);
@@ -620,7 +619,7 @@ public class SunyardReadCard {
         HashMap<String, String> cardDataMap = (HashMap<String, String>) TlvUtil.tlvToMap(cardData);
         KSNUtilities ksnUtilitites = new KSNUtilities();
         String workingKey = ksnUtilitites.getWorkingKey("3F2216D8297BCE9C",getInitialKSN()) ;
-        String pinBlock =  ksnUtilitites.DesEncryptDukpt(workingKey , getpanData(),cardPin);
+        String pinBlock =  ksnUtilitites.desEncryptDukpt(workingKey , getpanData(),cardPin);
         cardDataMap.put("CardPin",pinBlock);
         cardDataMap.put("ksn",ksnUtilitites.getLatestKsn());
         cardDataMap.put("pan",panNumber);
