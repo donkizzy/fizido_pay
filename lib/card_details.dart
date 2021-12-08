@@ -38,96 +38,95 @@ class CardDetails {
       this.pan,
       this.expiry,
       this.src,
-        this.cardPin,
-        this.ksn
+      this.cardPin,
+      this.ksn});
 
-      });
+  final String? the50;
+  final String? the57;
+  final String? the82;
+  final String? the84;
+  final String? the95;
+  final String? the9F06;
+  final String? the9F11;
+  final String? the5F2A;
+  final String? the9F09;
+  final String? the9B;
+  final String? the5F25;
+  final String? the9F36;
+  final String? the9F03;
+  final String? the9F07;
+  final String? the9C;
+  final String? the5F34;
+  final String? the5F24;
+  final String? the9F12;
+  final String? the5A;
+  final String? the9F10;
+  final String? the9F33;
+  final String? the9F40;
+  final String? the5F20;
+  final String? the9A;
+  final String? the9F26;
+  final String? the9F35;
+  final String? the9F02;
+  final String? the9F27;
+  final String? the9F34;
+  final String? the9F1A;
+  final String? the9F37;
+  final String? the9F1E;
+  final String? the9F21;
+  final String? the9F41;
+  String? strTrack2;
+  String? cardPin;
 
-  final String the50;
-  final String the57;
-  final String the82;
-  final String the84;
-  final String the95;
-  final String the9F06;
-  final String the9F11;
-  final String the5F2A;
-  final String the9F09;
-  final String the9B;
-  final String the5F25;
-  final String the9F36;
-  final String the9F03;
-  final String the9F07;
-  final String the9C;
-  final String the5F34;
-  final String the5F24;
-  final String the9F12;
-  final String the5A;
-  final String the9F10;
-  final String the9F33;
-  final String the9F40;
-  final String the5F20;
-  final String the9A;
-  final String the9F26;
-  final String the9F35;
-  final String the9F02;
-  final String the9F27;
-  final String the9F34;
-  final String the9F1A;
-  final String the9F37;
-  final String the9F1E;
-  final String the9F21;
-  final String the9F41;
-  String strTrack2;
-  String cardPin ;
-  String pan;
-  String expiry;
-  String src;
-  String ksn ;
+  String? pan;
+  String? expiry;
+  String? src;
+  String? ksn;
 
-  factory CardDetails.fromJson(Map<String, dynamic> json) => CardDetails(
-      the50: json["50"],
-      the57: json["57"],
-      the82: json["82"],
-      the84: json["84"],
-      the95: json["95"],
-      the9F06: json["9F06"],
-      the9F11: json["9F11"],
-      the5F2A: json["5F2A"],
-      the9F09: json["9F09"],
-      the9B: json["9B"],
-      the5F25: json["5F25"],
-      the9F36: json["9F36"],
-      the9F03: json["9F03"],
-      the9F07: json["9F07"],
-      the9C: json["9C"],
-      the5F34: json["5F34"],
-      the5F24: json["5F24"],
-      the9F12: json["9F12"],
-      the5A: json["5A"],
-      the9F10: json["9F10"],
-      the9F33: json["9F33"],
-      the9F40: json["9F40"],
-      the5F20: json["5F20"],
-      the9A: json["9A"],
-      the9F26: json["9F26"],
-      the9F35: json["9F35"],
-      the9F02: json["9F02"],
-      the9F27: json["9F27"],
-      the9F34: json["9F34"],
-      the9F1A: json["9F1A"],
-      the9F37: json["9F37"],
-      the9F1E: json["9F1E"],
-      the9F21: json["9F21"],
-      the9F41: json["9F41"],
-      strTrack2: json['strTrack2'],
-      pan: json['pan'],
-      expiry: json['expiry'],
-      src: json['src'],
-      cardPin: json['CardPin'],
-      ksn: json['ksn'],
-  );
+  factory CardDetails.fromJson(Map<String?, dynamic> json) => CardDetails(
+        the50: json["50"],
+        the57: json["57"],
+        the82: json["82"],
+        the84: json["84"],
+        the95: json["95"],
+        the9F06: json["9F06"],
+        the9F11: json["9F11"],
+        the5F2A: json["5F2A"],
+        the9F09: json["9F09"],
+        the9B: json["9B"],
+        the5F25: json["5F25"],
+        the9F36: json["9F36"],
+        the9F03: json["9F03"],
+        the9F07: json["9F07"],
+        the9C: json["9C"],
+        the5F34: json["5F34"],
+        the5F24: json["5F24"],
+        the9F12: json["9F12"],
+        the5A: json["5A"],
+        the9F10: json["9F10"],
+        the9F33: json["9F33"],
+        the9F40: json["9F40"],
+        the5F20: json["5F20"],
+        the9A: json["9A"],
+        the9F26: json["9F26"],
+        the9F35: json["9F35"],
+        the9F02: json["9F02"],
+        the9F27: json["9F27"],
+        the9F34: json["9F34"],
+        the9F1A: json["9F1A"],
+        the9F37: json["9F37"],
+        the9F1E: json["9F1E"],
+        the9F21: json["9F21"],
+        the9F41: json["9F41"],
+        strTrack2: json['strTrack2'],
+        pan: json['pan'],
+        expiry: json['expiry'],
+        src: json['src'],
+        cardPin: json['CardPin'],
+        ksn: json['ksn'],
+      );
 
-  Map<String, dynamic> toJson() => {
+  Map<String?, dynamic> toJson() => {
         "50": the50,
         "57": the57,
         "82": the82,
@@ -167,7 +166,6 @@ class CardDetails {
         'expiry': expiry,
         'src': src,
         'CardPin': cardPin,
-        'ksn': ksn
-    ,
+        'ksn': ksn,
       };
 }
